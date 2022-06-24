@@ -1,0 +1,17 @@
+header {
+  height: 5.1875rem;
+}
+
+.buttonLink {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+  text-transform: none;
+}
+
+a.button.active {
+  border: 1px solid var(--fore-color);
+}
