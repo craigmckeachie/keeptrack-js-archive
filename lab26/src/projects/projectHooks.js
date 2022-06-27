@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { projectAPI } from "./projectAPI";
-import { Project } from "./Project";
+import { useState, useEffect } from 'react';
+import { projectAPI } from './projectAPI';
+import { Project } from './Project';
 
 export function useProjects() {
   const [projects, setProjects] = useState([]);
@@ -18,7 +18,7 @@ export function useProjects() {
         if (currentPage === 1) {
           setProjects(data);
         } else {
-          setProjects(projects => [...projects, ...data]);
+          setProjects((projects) => [...projects, ...data]);
         }
       } catch (e) {
         setError(e.message);
@@ -29,17 +29,17 @@ export function useProjects() {
     loadProjects();
   }, [currentPage]);
 
-  const saveProject = project => {
+  const saveProject = (project) => {
     setSaving(true);
     projectAPI
       .put(project)
-      .then(updatedProject => {
-        let updatedProjects = projects.map(p => {
+      .then((updatedProject) => {
+        let updatedProjects = projects.map((p) => {
           return p.id === project.id ? new Project(updatedProject) : p;
         });
         setProjects(updatedProjects);
       })
-      .catch(e => {
+      .catch((e) => {
         setSavingError(e.message);
       })
       .finally(() => setSaving(false));
@@ -53,6 +53,6 @@ export function useProjects() {
     setCurrentPage,
     saving,
     savingError,
-    saveProject
+    saveProject,
   };
 }

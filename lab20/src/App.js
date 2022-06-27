@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   NavLink,
-} from "react-router-dom";
-import ProjectsPage from "./projects/ProjectsPage";
-import "./App.css";
-import HomePage from "./home/HomePage";
+} from 'react-router-dom';
+import ProjectsPage from './projects/ProjectsPage';
+import './App.css';
+import HomePage from './home/HomePage';
 
 function App() {
   return (

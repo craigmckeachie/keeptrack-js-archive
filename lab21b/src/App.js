@@ -1,11 +1,11 @@
-import React from "react";
-import "./App.css";
-import ProjectsPage from "./projects/ProjectsPage";
-import ProjectPage from "./projects/ProjectPage";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import React from 'react';
+import './App.css';
+import ProjectsPage from './projects/ProjectsPage';
+import ProjectPage from './projects/ProjectPage';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import { Route, NavLink, Switch, useLocation } from "react-router-dom";
-import HomePage from "./home/HomePage";
+import { Route, NavLink, Switch, useLocation } from 'react-router-dom';
+import HomePage from './home/HomePage';
 
 function App() {
   const location = useLocation();

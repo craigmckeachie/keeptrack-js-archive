@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Project } from "./Project";
-import ProjectCard from "./ProjectCard";
-import ProjectForm from "./ProjectForm";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Project } from './Project';
+import ProjectCard from './ProjectCard';
+import ProjectForm from './ProjectForm';
 
 function ProjectList({ projects }) {
   const [projectBeingEdited, setProjectBeingEdited] = useState({});
 
-  const handleEdit = project => {
+  const handleEdit = (project) => {
     setProjectBeingEdited(project);
   };
 
@@ -17,7 +17,7 @@ function ProjectList({ projects }) {
 
   return (
     <div className="row">
-      {projects.map(project => (
+      {projects.map((project) => (
         <div key={project.id} className="cols-sm">
           {project === projectBeingEdited ? (
             <ProjectForm project={project} onCancel={cancelEditing} />
@@ -31,7 +31,7 @@ function ProjectList({ projects }) {
 }
 
 ProjectList.propTypes = {
-  projects: PropTypes.arrayOf(PropTypes.instanceOf(Project)).isRequired
+  projects: PropTypes.arrayOf(PropTypes.instanceOf(Project)).isRequired,
 };
 
 export default ProjectList;

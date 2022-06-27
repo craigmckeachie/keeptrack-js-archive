@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { projectAPI } from "./projectAPI";
-import ProjectDetail from "./ProjectDetail";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { projectAPI } from './projectAPI';
+import ProjectDetail from './ProjectDetail';
 
 function ProjectPage(props) {
   const [loading, setLoading] = useState(false);

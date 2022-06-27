@@ -1,10 +1,10 @@
-import { Project } from "./Project";
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Project } from './Project';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function formatDescription(description) {
-  return description.substring(0, 60) + "...";
+  return description.substring(0, 60) + '...';
 }
 
 function ProjectCard(props) {
@@ -16,7 +16,7 @@ function ProjectCard(props) {
     <div className="card">
       <img src={project.imageUrl} alt={project.name} />
       <section className="section dark">
-        <Link to={"/projects/" + project.id}>
+        <Link to={'/projects/' + project.id}>
           <h5 className="strong">
             <strong>{project.name}</strong>
           </h5>

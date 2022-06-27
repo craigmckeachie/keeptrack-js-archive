@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Project } from "./Project";
-import { useSaveProject } from "./projectHooks";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Project } from './Project';
+import { useSaveProject } from './projectHooks';
 
 function ProjectForm({ project: initialProject, onCancel }) {
   const [project, setProject] = useState(initialProject);
   const [errors, setErrors] = useState({
-    name: "",
-    description: "",
-    budget: ""
+    name: '',
+    description: '',
+    budget: '',
   });
   const { mutate: saveProject, isLoading } = useSaveProject();
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (!isValid()) return;
     saveProject(project);
@@ -22,14 +22,14 @@ function ProjectForm({ project: initialProject, onCancel }) {
     const { type, name, value, checked } = event.target;
     // if input type is checkbox use checked
     // otherwise it's type is text, number etc. so use value
-    let updatedValue = type === "checkbox" ? checked : value;
+    let updatedValue = type === 'checkbox' ? checked : value;
 
     //if input type is number convert the updatedValue string to a +number
-    if (type === "number") {
+    if (type === 'number') {
       updatedValue = Number(updatedValue);
     }
     const change = {
-      [name]: updatedValue
+      [name]: updatedValue,
     };
 
     let updatedProject;
@@ -38,7 +38,7 @@ function ProjectForm({ project: initialProject, onCancel }) {
     // so we can keep the project properties that aren't being edited +like project.id
     // the spread operator (...) is used to
     // spread the previous project properties and the new change
-    setProject(p => {
+    setProject((p) => {
       updatedProject = new Project({ ...p, ...change });
       return updatedProject;
     });
@@ -46,18 +46,18 @@ function ProjectForm({ project: initialProject, onCancel }) {
   }
 
   function validate(project) {
-    let errors = { name: "", description: "", budget: "" };
+    let errors = { name: '', description: '', budget: '' };
     if (project.name.length === 0) {
-      errors.name = "Name is required";
+      errors.name = 'Name is required';
     }
     if (project.name.length > 0 && project.name.length < 3) {
-      errors.name = "Name needs to be at least 3 characters.";
+      errors.name = 'Name needs to be at least 3 characters.';
     }
     if (project.description.length === 0) {
-      errors.description = "Description is required.";
+      errors.description = 'Description is required.';
     }
     if (project.budget === 0) {
-      errors.budget = "Budget must be more than $0.";
+      errors.budget = 'Budget must be more than $0.';
     }
     return errors;
   }
@@ -135,7 +135,7 @@ function ProjectForm({ project: initialProject, onCancel }) {
 
 ProjectForm.propTypes = {
   project: PropTypes.instanceOf(Project),
-  onCancel: PropTypes.func.isRequired
+  onCancel: PropTypes.func.isRequired,
 };
 
 export default ProjectForm;

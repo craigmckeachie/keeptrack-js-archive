@@ -1,19 +1,19 @@
-import React from "react";
-import "./App.css";
-import ProjectsPage from "./projects/ProjectsPage";
-import ProjectPage from "./projects/ProjectPage";
-import PrivateRoute from "./account/PrivateRoute";
+import React from 'react';
+import './App.css';
+import ProjectsPage from './projects/ProjectsPage';
+import ProjectPage from './projects/ProjectPage';
+import PrivateRoute from './account/PrivateRoute';
 
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Switch,
-} from "react-router-dom";
-import HomePage from "./home/HomePage";
-import SignInPage from "./account/SignInPage";
-import AccountHeader from "./account/AccountHeader";
-import { ProvideAuth } from "./account/useAuth";
+} from 'react-router-dom';
+import HomePage from './home/HomePage';
+import SignInPage from './account/SignInPage';
+import AccountHeader from './account/AccountHeader';
+import { ProvideAuth } from './account/useAuth';
 
 function App() {
   console.log(process.env.NODE_ENV);

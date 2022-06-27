@@ -3,7 +3,6 @@ import { SAVE_PROJECT_SUCCESS } from '../projectTypes';
 import { Project } from '../../Project';
 import { MOCK_PROJECTS } from '../../MockProjects';
 
-
 describe('project reducer', () => {
   test('should update an existing project', () => {
     const project = MOCK_PROJECTS[0];

@@ -1,7 +1,7 @@
-import React from "react";
-import ProjectList from "./ProjectList";
+import React from 'react';
+import ProjectList from './ProjectList';
 
-import { useProjects } from "./projectHooks";
+import { useProjects } from './projectHooks';
 
 function ProjectsPage() {
   const {
@@ -11,11 +11,11 @@ function ProjectsPage() {
     setCurrentPage,
     saveProject,
     saving,
-    savingError
+    savingError,
   } = useProjects();
 
   const handleMoreClick = () => {
-    setCurrentPage(currentPage => currentPage + 1);
+    setCurrentPage((currentPage) => currentPage + 1);
   };
 
   return (
