@@ -3,6 +3,7 @@
   # fix errata
   # archive branches
   # delete api directories and lab01 files
+  # run prettier: prettier --write . 
   # chmod 777 create-branches.sh
   # rename keeptrack-js to keeptrack-js-17 
       # https://stackoverflow.com/a/16602311/48175
