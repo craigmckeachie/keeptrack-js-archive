@@ -180,7 +180,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab23
   npm install redux react-redux redux-thunk
-  npm install --save-dev @redux-devtools/core
+  npm install --save-dev npm install @redux-devtools/extension
   read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab23"
