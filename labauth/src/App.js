@@ -1,19 +1,19 @@
-import React from 'react';
-import './App.css';
-import ProjectsPage from './projects/ProjectsPage';
-import ProjectPage from './projects/ProjectPage';
-import PrivateRoute from './account/PrivateRoute';
+import React from "react";
+import "./App.css";
+import ProjectsPage from "./projects/ProjectsPage";
+import ProjectPage from "./projects/ProjectPage";
+import PrivateRoute from "./account/PrivateRoute";
 
 import {
   BrowserRouter as Router,
   Route,
   NavLink,
   Switch,
-} from 'react-router-dom';
-import HomePage from './home/HomePage';
-import SignInPage from './account/SignInPage';
-import AccountHeader from './account/AccountHeader';
-import { ProvideAuth } from './account/useAuth';
+} from "react-router-dom";
+import HomePage from "./home/HomePage";
+import SignInPage from "./account/SignInPage";
+import AccountHeader from "./account/AccountHeader";
+import { ProvideAuth } from "./account/useAuth";
 
 function App() {
   console.log(process.env.NODE_ENV);
@@ -25,7 +25,7 @@ function App() {
           <span className="logo">
             <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" />
           </span>
-          <NavLink to="/" exact className="button rounded">
+          <NavLink to="/" className="button rounded">
             <span className="icon-home"></span>
             Home
           </NavLink>
@@ -36,15 +36,15 @@ function App() {
         </header>
         <div className="container">
           <Switch>
-            <Route path="/" exact component={HomePage} />
-            <PrivateRoute path="/projects" exact>
+            <Route path="/" component={HomePage} />
+            <PrivateRoute path="/projects">
               <ProjectsPage />
             </PrivateRoute>
-            <PrivateRoute path="/projects/:id" exact>
+            <PrivateRoute path="/projects/:id">
               <ProjectPage />
             </PrivateRoute>
 
-            <Route path="/signin" exact component={SignInPage} />
+            <Route path="/signin" component={SignInPage} />
           </Switch>
         </div>
       </Router>

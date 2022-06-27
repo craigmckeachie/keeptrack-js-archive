@@ -1,11 +1,11 @@
-import React from 'react';
-import './App.css';
-import ProjectsPage from './projects/ProjectsPage';
-import ProjectPage from './projects/ProjectPage';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React from "react";
+import "./App.css";
+import ProjectsPage from "./projects/ProjectsPage";
+import ProjectPage from "./projects/ProjectPage";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import { Route, NavLink, Switch, useLocation } from 'react-router-dom';
-import HomePage from './home/HomePage';
+import { Route, NavLink, Switch, useLocation } from "react-router-dom";
+import HomePage from "./home/HomePage";
 
 function App() {
   const location = useLocation();
@@ -15,7 +15,7 @@ function App() {
         <span className="logo">
           <img src="/assets/logo-3.svg" alt="logo" width="49" height="99" />
         </span>
-        <NavLink to="/" exact className="button rounded">
+        <NavLink to="/" className="button rounded">
           <span className="icon-home"></span>
           Home
         </NavLink>
@@ -31,8 +31,8 @@ function App() {
         >
           <div className="container">
             <Switch location={location}>
-              <Route path="/" exact component={HomePage} />
-              <Route path="/projects" exact component={ProjectsPage} />
+              <Route path="/" component={HomePage} />
+              <Route path="/projects" component={ProjectsPage} />
               <Route path="/projects/:id" component={ProjectPage} />
             </Switch>
           </div>
