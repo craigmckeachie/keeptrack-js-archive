@@ -1,9 +1,16 @@
 #!/bin/bash
 
-  # chomod 777 create-batches.sh
+  # fix errata
+  # archive branches
+  # delete api directories and lab01 files
+  # chmod 777 create-branches.sh
   # rename keeptrack-js to keeptrack-js-17 
-  # create keeptrack-js npx create-react-app keeptrack-js --use-npm
+      # https://stackoverflow.com/a/16602311/48175
+  # create keeptrack-js: npx create-react-app keeptrack-js --use-npm
   # init repo and publish as public repo on github
+  # create script to test branches
+  # test branches
+
 
   cp -r ~/Documents/git/react/keeptrack-js-archive/lab01/* ~/Documents/git/react/keeptrack-js
   cd ~/Documents/git/react/keeptrack-js
@@ -23,6 +30,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab03
   npm i mini.css
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab03"
   git push --set-upstream origin lab03
@@ -123,7 +131,8 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab17
   npm i json-server
-  echo `add api script before continuing`
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
+  echo "add api script before continuing"
   read -p "Press any key to resume ..."
   git add . 
   git commit -m "lab17"
@@ -147,6 +156,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab20
   npm install react-router-dom
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab20"
   git push --set-upstream origin lab20
@@ -170,6 +180,7 @@
   git checkout -b lab23
   npm install redux react-redux redux-thunk
   npm install --save-dev @redux-devtools/core
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab23"
   git push --set-upstream origin lab23
@@ -199,6 +210,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab27
   npm install react-query
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab27"
   git push --set-upstream origin lab27
@@ -209,6 +221,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab21a
   npm install react-transition-group
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab21a"
   git push --set-upstream origin lab21a
@@ -224,6 +237,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab21c
   npm i react-content-loader
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "lab21c"
   git push --set-upstream origin lab21c
@@ -233,6 +247,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b redux-toolkit
   npm install @reduxjs/toolkit
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "redux-toolkit"
   git push --set-upstream origin redux-toolkit
@@ -249,6 +264,7 @@
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b labauth
   npm i jwt-decode jsonwebtoken
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
   git add .
   git commit -m "labauth"
   git push --set-upstream origin labauth

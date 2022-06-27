@@ -181,3 +181,4 @@ find ./archive -name "package-lock.json" -type f -delete
 find ./archive -name "package.json" -type f -delete
 find ./archive/*/api
 echo "delete extra api directories manually"
+echo "delete lab01 files"
