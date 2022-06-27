@@ -1,0 +1,23 @@
+{
+  "name": "keeptrack-js-archive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prettier.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigmckeachie/keeptrack-js-archive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigmckeachie/keeptrack-js-archive/issues"
+  },
+  "homepage": "https://github.com/craigmckeachie/keeptrack-js-archive#readme",
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}
