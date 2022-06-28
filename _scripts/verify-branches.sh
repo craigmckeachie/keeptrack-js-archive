@@ -204,4 +204,6 @@
   read -t 3 -p "I am going to wait for 3 seconds only ..."
   npm start
   # Ctrl + C
+  npm test
+  # Ctrl + C
     
