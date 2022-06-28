@@ -48,7 +48,7 @@ branches.forEach((b) => {
   scripts.push(`
   git checkout ${b} -f
   npm install
-  read -t 5 -p "I am going to wait for 5 seconds only ..."
+  read -t 3 -p "I am going to wait for 3 seconds only ..."
   npm start
   # Ctrl + C
     `);

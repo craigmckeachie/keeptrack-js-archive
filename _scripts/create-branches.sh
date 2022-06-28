@@ -3,12 +3,14 @@
   # fix errata
   # archive branches
   # delete api directories and lab01 files
-  # run prettier: prettier --write . 
+  # run prettier: 
+  # npx prettier --write .
   # chmod 777 create-branches.sh
   # rename keeptrack-js to keeptrack-js-17 
       # https://stackoverflow.com/a/16602311/48175
   # create keeptrack-js: npx create-react-app keeptrack-js --use-npm
   # init repo and publish as public repo on github
+  # run this scrip to create branches
   # create script to test branches
   # test branches
 
@@ -200,14 +202,15 @@
   git add .
   git commit -m "lab25"
   git push --set-upstream origin lab25
-    
+  
+  git checkout lab22
   cp -r ~/Documents/git/react/keeptrack-js-archive/lab26/* ~/Documents/git/react/keeptrack-js
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab26
   git add .
   git commit -m "lab26"
   git push --set-upstream origin lab26
-    
+
   cp -r ~/Documents/git/react/keeptrack-js-archive/lab27/* ~/Documents/git/react/keeptrack-js
   cd ~/Documents/git/react/keeptrack-js
   git checkout -b lab27
