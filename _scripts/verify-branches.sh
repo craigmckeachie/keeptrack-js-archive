@@ -145,17 +145,17 @@
   # npm start
   # # Ctrl + C
     
-  git checkout lab25 -f
-  npm install
-  read -t 5 -p "I am going to wait for 5 seconds only ..."
-  npm start
-  # Ctrl + C
+  # git checkout lab25 -f
+  # npm install
+  # read -t 5 -p "I am going to wait for 5 seconds only ..."
+  # npm start
+  # # Ctrl + C
     
   # git checkout lab26 -f
   # npm install
   # read -t 5 -p "I am going to wait for 5 seconds only ..."
   # npm start
-  # # Ctrl + C
+  # Ctrl + C
     
   # git checkout lab27 -f
   # npm install
@@ -193,11 +193,11 @@
   # npm start
   # # Ctrl + C
     
-  # git checkout labauth -f
-  # npm install
-  # read -t 5 -p "I am going to wait for 5 seconds only ..."
-  # npm start
-  # # Ctrl + C
+  git checkout labauth -f
+  npm install
+  read -t 5 -p "I am going to wait for 5 seconds only ..."
+  npm start
+  # Ctrl + C
     
   # git checkout testing -f
   # npm install

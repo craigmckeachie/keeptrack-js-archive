@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from './useAuth';
 
 function AccountHeader() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const auth = useAuth();
 
   return (
@@ -17,7 +17,7 @@ function AccountHeader() {
             className="buttonLink"
             onClick={() => {
               auth.signout();
-              history.push('/');
+              navigate('/');
             }}
           >
             Sign Out

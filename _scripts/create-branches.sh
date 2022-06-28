@@ -134,6 +134,7 @@
   npm i json-server
   read -t 5 -p "I am going to wait for 5 seconds only ..."
   echo "add api script before continuing"
+  echo '"api": "json-server api/db.json --port 4000"'
   read -p "Press any key to resume ..."
   git add . 
   git commit -m "lab17"
@@ -266,6 +267,9 @@
   git checkout -b labauth
   npm i jwt-decode jsonwebtoken
   read -t 5 -p "I am going to wait for 5 seconds only ..."
+  echo "add api:auth script before continuing"
+  echo ',"api:auth": "node ./api/auth-api-server.js"'
+  read -p "Press any key to resume ..."
   git add .
   git commit -m "labauth"
   git push --set-upstream origin labauth

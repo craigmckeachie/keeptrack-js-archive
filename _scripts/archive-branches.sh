@@ -93,8 +93,8 @@
     git checkout lab21c
     git archive --output=./archive/lab21c.zip lab21c $(git diff --diff-filter=ACMRTUXB --name-only lab21b lab21c)
 
-    git checkout auth
-    git archive --output=./archive/auth.zip auth $(git diff --diff-filter=ACMRTUXB --name-only lab21 auth)
+    git checkout labauth
+    git archive --output=./archive/auth.zip labauth $(git diff --diff-filter=ACMRTUXB --name-only lab22 labauth)
 
     git checkout testing1
     git archive --output=./archive/testing.zip testing1 $(git diff --diff-filter=ACMRTUXB --name-only lab25 testing1)

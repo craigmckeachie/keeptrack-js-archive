@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink,
-  Switch,
+  Routes,
 } from 'react-router-dom';
 import HomePage from './home/HomePage';
 import SignInPage from './account/SignInPage';
@@ -35,17 +35,26 @@ function App() {
           <AccountHeader />
         </header>
         <div className="container">
-          <Switch>
-            <Route path="/" component={HomePage} />
-            <PrivateRoute path="/projects">
-              <ProjectsPage />
-            </PrivateRoute>
-            <PrivateRoute path="/projects/:id">
-              <ProjectPage />
-            </PrivateRoute>
-
-            <Route path="/signin" component={SignInPage} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/projects"
+              element={
+                <PrivateRoute>
+                  <ProjectsPage />
+                </PrivateRoute>
+              }
+            ></Route>
+            <Route
+              path="/projects/:id"
+              element={
+                <PrivateRoute>
+                  <ProjectPage />
+                </PrivateRoute>
+              }
+            ></Route>
+            <Route path="/signin" element={<SignInPage />} />
+          </Routes>
         </div>
       </Router>
     </ProvideAuth>

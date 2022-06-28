@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from './useAuth';
 
 function SignInPage() {
-  let history = useHistory();
+  const navigate = useNavigate();
   let location = useLocation();
   let auth = useAuth();
   const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ function SignInPage() {
       .signin(email, password)
       .then((authenticated) => {
         if (authenticated) {
-          history.replace(from);
+          navigate(from);
         }
       })
       .catch((error) => setErrorMessage(error.message));
