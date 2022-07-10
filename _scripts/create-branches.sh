@@ -284,6 +284,7 @@
   # npm i react-test-renderer --save-dev
   # npm install msw --save-dev
   # npm install redux-mock-store @types/redux-mock-store --save-dev
+  # npm install @testing-library/user-event@14
   # read -t 5 -p "I am going to wait for 5 seconds only ..."
   # git add .
   # git commit -m "testing"
